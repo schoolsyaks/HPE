@@ -1,3 +1,9 @@
+#https://www.powershellgallery.com/packages/HPEiLOCmdlets/4.3.0.0
+#Install-Module -Name HPEiLOCmdlets
+
+#https://www.powershellgallery.com/packages/HPEOneView.850/8.50.3667.2043 
+#Install-Module -Name HPEOneView.850
+
 Import-Module HPEOneView.850
 Import-Module HPEiLOCmdlets
 
