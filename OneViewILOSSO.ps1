@@ -33,11 +33,12 @@ foreach ($Server in $ServerList)
 
     #Set-HPEiLOSNMPAlertSetting -Connection $IloCon -SNMPv1Enabled Disabled
     #Enable-HPEiLOSecurityDashboardSetting -Connection $IloCon -IgnoreSecureBoot
+    #Disable-HPEiLOSecurityDashboardSetting -Connection $IloCon -IgnoreSecureBoot
 
     if($IloCon -ne $null) {
-        Reset-HPEiLO -Connection $IloCon -Device iLO -ResetType GracefulRestart
-        # $disconnect = $IloCon | Disconnect-HPEiLO
-        # $disconnect | Format-List
+        # Reset-HPEiLO -Connection $IloCon -Device iLO -ResetType GracefulRestart
+        $disconnect = $IloCon | Disconnect-HPEiLO
+        $disconnect | Format-List
     }
 
     
